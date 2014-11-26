@@ -1,7 +1,8 @@
 Résumé Template
 =========
 
-This is a very simple LaTeX template for your résumé. You can open `resume.pdf`
+This is a very simple LaTeX template for your résumé. You can download
+[resume.pdf](https://github.com/pedropobla/resume-template/blob/master/resume.pdf?raw=true)
 for a preview.
 
 How to use it
