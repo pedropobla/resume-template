@@ -1,0 +1,94 @@
+\documentclass[paper=a4,fontsize=10pt]{scrartcl}
+
+\usepackage[english]{babel} % LaTeX default strings in English
+\usepackage[dvipsnames,usenames]{color} % Beautiful colors :)
+\usepackage{enumitem} % Beautiful enumerates and itemizes
+\usepackage[T1]{fontenc} % Use 8-bit encoding
+\usepackage{fourier} % Use the Adobe Utopia font instead of LaTeX default font
+\usepackage[top=1cm, bottom=1cm, footskip=0.3in, left=2cm, right=2cm]{geometry}
+\usepackage{hyperref} % For the \href command
+\usepackage[utf8]{inputenc} % UTF-8 input encoding
+\usepackage{marvosym} % Funny symbols like \Letter, \Telefon or \ComputerMouse
+
+\include{resume-commands}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%                  Configuration                   %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Default paragraph indentation. More info. at the LaTeX Wikibooks page:
+% http://en.wikibooks.org/wiki/LaTeX/Paragraph_Formatting#Paragraph_indent_and_break
+\setlength{\parindent}{1mm}
+
+% Without page numbers. If you want page numbers to appear in your resume, you
+% can remove this command.
+\pagestyle{empty}
+
+% Avoid separation among items in a list, and also avoid separation around the
+% whole list. \setlist{noitemsep} to leave space around whole list
+\setlist{nosep}
+
+% Change this to your favourite color.
+% List of available colors: http://en.wikibooks.org/wiki/LaTeX/Colors
+\newcommand{\blocktitleColor}{MidnightBlue}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%                 Resume contents                  %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\header
+{John Doe}
+{
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{c l} % Table used to align lines, independently of the icon used
+  \Letter & \href{mailto:hi@example.com}{hi@example.com} \\
+  \ComputerMouse & \href{http://www.example.com}{http://www.example.com} \\
+  \Telefon & \href{tel:+34123456789}{(+34) 123456789} \\
+\end{tabular}
+}
+{
+Example Street, 1 \\
+12345, Cityland \\
+Stateland, Countryland
+}
+
+\begin{resumeblock}{Education}
+  \begin{resumesection}{The University}{BS in Something}{Jan. 1970 - Current}
+    \begin{itemize}
+      \item GPA: 42 out of 100.
+      \item Expected graduation in fall 2042.
+    \end{itemize}
+  \end{resumesection}
+\end{resumeblock}
+
+\begin{resumeblock}{Work experience}
+  \begin{resumesection}{Google}{Chief Executive Officer}{Sept. 1998 - Current}
+    \begin{itemize}
+      \item Just being the CEO.
+    \end{itemize}
+  \end{resumesection}
+\end{resumeblock}
+
+\begin{resumeblock}{Activities and Organizations}
+  \begin{resumesection}{The Activity}{}{2011 - 2014}
+    \begin{itemize}
+      \item This activity was awesome.
+      \item Really awesome.
+    \end{itemize}
+  \end{resumesection}
+  \begin{resumesection}{The Other Activity}{}{2011 - 2014}
+    \begin{itemize}
+      \item This activity was also awesome.
+    \end{itemize}
+  \end{resumesection}
+  \begin{resumesection}{The Organization}{}{2012 - 2013}
+    \begin{itemize}
+      \item This organization was not that awesome.
+    \end{itemize}
+  \end{resumesection}
+\end{resumeblock}
+
+\end{document}

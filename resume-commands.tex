@@ -1,0 +1,59 @@
+% Set of commands used for creating a beautiful resume
+
+% Resume header
+\newcommand{\header}[3] {
+  \begin{center}
+    \huge{#1} \\
+  \end{center}
+  \begin{minipage}{.5\linewidth}
+    \begin{flushleft}
+      #2
+    \end{flushleft}
+  \end{minipage}
+  \begin{minipage}{.5\linewidth}
+    \begin{flushright}
+      #3
+    \end{flushright}
+  \end{minipage}
+  % This should end with a blank line
+
+}
+
+% Resume block title (to be used privately by resumeblock environment)
+\newcommand{\blocktitle}[1] {
+  \parbox{\linewidth} {
+    \textcolor{\blocktitleColor} {
+      \large {#1}\strut
+      \hrule
+    }
+  }
+  % This should end with a blank line
+
+}
+
+% Resume section title (to be used privately by resumesection environment)
+\newcommand{\sectiontitle}[3] {
+  \textbf{#1}
+  \ifx&#2& % if #2 is empty
+  \else % #2 has some content
+    \textcolor{Gray}{---} #2
+  \fi
+  \hfill #3
+  % This should end with a blank line
+
+}
+
+% Resume block environment
+\newenvironment{resumeblock}[1]
+{
+  \vspace{0.7em}
+  \blocktitle{#1}
+}
+
+% Resume section environment
+\newenvironment{resumesection}[3]
+{
+  \vspace{0.3em}
+  \sectiontitle{#1}{#2}{#3}
+}
+
